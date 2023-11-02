@@ -1,10 +1,22 @@
 "use client"
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Button from './ui/button'
 import { ShoppingBag } from 'lucide-react'
 
 const NavbarActions = () => {
+
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, [])
+
+  if(!isMounted) {
+    return null;
+  }
+  
+
   return (
     <div className='ml-auto flex items-center gap-x-4'>
       <Button
