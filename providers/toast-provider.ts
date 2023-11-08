@@ -7,3 +7,5 @@ const ToastProvider = () => {
     <Toaster />
   )
 }
+
+export default ToastProvider;
